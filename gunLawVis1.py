@@ -6,16 +6,16 @@
 
 import pandas as pd
 import altair as alt
-from vega_datasets import data
 import streamlit
 
-violenceLaw = pd.read_csv('GunViolenceLaw.csv',index_col=0)
-state_map = data.us_10m.url
-state_id = data.population_engineers_hurricanes()[['state', 'id']]
-violenceLaw = pd.merge(state_id, violenceLaw, how='inner', on = 'state')
-violenceLaw.to_csv('verson1.csv') 
+#violenceLaw = pd.read_csv('GunViolenceLaw.csv',index_col=0)
+#state_map = data.us_10m.url
+#state_id = data.population_engineers_hurricanes()[['state', 'id']]
+#violenceLaw = pd.merge(state_id, violenceLaw, how='inner', on = 'state')
+#violenceLaw.to_csv('verson1.csv') 
 
-
+state_map = 'https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json'
+violenceLaw = pd.read_csv('verson1.csv',index_col=0)
 # In[5]:
 
 
